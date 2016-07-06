@@ -27,7 +27,6 @@ end
 class Puppet::Provider::Vcenter <  Puppet::Provider
   confine :feature => :vsphere
 
-  private
 
   def vim
     @transport ||= PuppetX::Puppetlabs::Transport.retrieve(:resource_ref => resource[:transport], :catalog => resource.catalog, :provider => 'vsphere')
